@@ -41,7 +41,7 @@ export async function signup(req, res) {
     const PROFILE_PICS = ["/avatar1.png", "avatar2.png", "avatar3.png"];
     const image = PROFILE_PICS[Math.floor(Math.random() * PROFILE_PICS.length)];
 
-    const newUser = newUser({
+    const newUser = new User({
       email,
       password,
       username,
@@ -49,6 +49,14 @@ export async function signup(req, res) {
     });
 
     await newUser.save();
+
+    res.status(201).json({
+      success: true,
+      user: {
+        ...newUser._doc,
+        password: "",
+      },
+    });
   } catch (error) {
     console.log("Error in signup controller", error.message);
     res.status(500).json({ success: false, message: "Internal server error" });
