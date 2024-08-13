@@ -9,6 +9,7 @@ I'm trying to enhance my coding abilities and experience by taking on this full-
 ### Technologies used
 
 - MERN stack: MongoDB, Express, React, and Nodejs
+- Tailwind for frontend styling
 - Postman for API testing
 - Axios for fetching, bcryptjs and jsonwebtoken for encryption and authentication
 
