@@ -79,7 +79,7 @@ const SignUpPage = () => {
             Already a member?{" "}
             <Link to={"/login"} className='text-red-500 hover:underline'>
               {" "}
-              Sign in
+              Log in
             </Link>
           </div>
         </div>
